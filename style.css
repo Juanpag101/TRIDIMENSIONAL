@@ -645,17 +645,17 @@ span {
     width: 130px;
   }
 
-  .nav__links {
+  /* .nav__links {
     position: fixed;
     inset: 0 0 0 10%;
     background: white;
     opacity: 0.1;
-  }
+  } */
 
   .nav__link--chara, .nav__link {
-    font-size: 36px;
+    font-size: 16px;
     color: white;
-    padding: 24px;
+    /* padding: 24px; */
   }
 
   .nav__links {
