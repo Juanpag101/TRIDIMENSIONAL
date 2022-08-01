@@ -10,6 +10,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #000f22;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .row {
   width: 100%;
   margin: 0 auto;
@@ -73,6 +79,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  z-index: 1000;
+
 }
 
 .nav__logo--img {
@@ -95,12 +103,15 @@ body {
   text-decoration: none;
   padding-left: 16px;
   font-weight: bold;
+  z-index: 1000;
 }
 
 .nav__links {
   display: flex;
   align-items: center;
   font-size: 14px;
+  z-index: 1000;
+
 }
 
 .btn {
@@ -130,14 +141,13 @@ body {
 .triangle {
   height: 0;
   width: 0;
-  border-left: 2460px solid  #000f22;
+  border-left: 2270px solid  white;
   border-bottom: 101px solid transparent;
-  border-top: 3300px solid transparent;
+  border-top: 3380px solid transparent;
   position: absolute;
   margin-top: -800px;
-  top: 0;
-  left: 0;
-  z-index: -90;
+  transform: rotate(180deg);
+  z-index: -9000;
 }
 
 
@@ -153,6 +163,8 @@ header {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
+  margin-bottom: 150px;
+
 }
 .header__container {
   display: flex;
@@ -187,13 +199,14 @@ header {
 
 .header__img--pic {
   width: 100%;
+  z-index: -1000;
 }
 
 @media (min-width: 1200px) {
   .header__img--pic {
-    width: 60%;
+    width: 55%;
     position: absolute;
-    transform: translate(-30px, -260px);
+    transform: translate(-30px, -300px);
   }
 }
 
@@ -265,7 +278,7 @@ header {
 }
 
 .titulo__servicios {
-    color: #5553ec;
+    color: #9098BE;
     font-size: 80px;
     position: absolute;
     transform: translate(0px, -30px);
@@ -325,14 +338,13 @@ MARCAS
 
 .titulo__marcas {
     background-color: #000f22;
-    color: black;
+    color: #9098BE;
     font-size: 80px;
     position: absolute;
     transform: translate(900px, -50px);
     position: relative;
     padding: 10px; 
-    border: 2px solid white;
-    background-color: white;
+    border: 2px solid #000f22;
     position: absolute;
     z-index: 10000;
 
@@ -367,9 +379,13 @@ FOOTER
 
 */
 
+footer {
+  margin-top: 230px;
+}
+
 .footer__container {
   background-color: #000f22;
-
+  z-index: 100;
 }
 
 .footer__wrapper {
@@ -378,6 +394,8 @@ FOOTER
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
+  z-index: 100;
+
 
 }
 
@@ -385,16 +403,22 @@ FOOTER
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+
 }
 
 .footer__logo--img {
   width: 80px;
   margin-right: 12px;
+  z-index: 100;
+
 
 }
 
 .logo__title--footer {
   color: white;
+  z-index: 100;
+
 }
 
 .footer__copyright {
@@ -405,18 +429,28 @@ FOOTER
   display: flex;
   align-items: center;
   color: rgba(203,213,224,var(--tw-text-opacity));
+  z-index: 100;
+
 }
 
 .footer__links {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 100;
+
 }
 
 #i_link{ 
   transition: all 300ms ease;
   color: black;
+  z-index: 100;
 
+
+}
+
+.footer__img:hover {
+  color: #f73c57;
 }
 
 #i_link:hover  {
@@ -437,5 +471,202 @@ FOOTER
   border-radius: 999px;
   font-size: 16px;
   margin-right: 16px;
+
+}
+
+/* 
+
+EQUIPO
+
+*/
+
+.container__equipo {
+  background-image: url("./assests/team.png");
+  background-repeat: no-repeat;
+  background-size: 1800px;
+  background-position: 40px, 100px;
+  margin-bottom: 64px;
+  height: 900px;
+  position: relative;
+  z-index: 0;
+
+}
+
+
+li {
+  color: white;
+  font-size: 48px;
+  padding-top: 12px;
+}
+
+span {
+  color: #f73c57;
+  font-size: 80px;
+}
+
+
+.triangle__equipo {
+  height: 0;
+  width: 0;
+  border-left: 1270px solid  #000f22;
+  border-bottom: 0px solid transparent;
+  border-top: 1287px solid transparent;
+  position: absolute;
+  transform: rotate(90deg);
+  z-index: -1000;
+}
+
+@media (max-width: 580px) {
+  .header__description--title {
+    font-size: 36px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header__description--para {
+    font-size: 20px;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .header__img--pic {
+    display: none;
+  }
+
+  .header__description {
+    width: 100%;
+    align-items: center;
+  }
+
+  .header__img {
+    width: 0%;
+  }
+
+  .titulo__servicios {
+    font-size: 48px;
+    transform: translate(0px, -15px);
+
+  }
+
+  .subtitulo__servicios {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .highlight__text{
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    
+
+  }
+
+  .highlight__subtitle {
+    font-size: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 64px;
+    text-align: left;
+    color: white;
+  
+  }
+
+  .titulo__marcas {
+    font-size: 48px;
+    transform: translate(0px, -35px);
+
+  }
+
+  .marcas__subtitulo {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .clientes {
+    padding: 24px 24px;
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .clientes__img {
+    width: 140px;
+  }
+
+  li {
+    font-size: 24px;
+  }
+  
+  span {
+    font-size: 40px;
+    padding-right: 12px;
+  }
+
+  .triangle__equipo {
+    display: none;
+  }
+
+  .container__equipo {
+    background: none;
+    height: auto;
+    margin: 0;
+  }
+
+  /* .footer__container {
+    background-color: #9098BE;
+  } */
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+
+  }
+
+  .footer__copyright {
+      margin: 24px 0;
+  }
+
+  .footer__img {
+      width: 32px;
+      height: 32px;
+  }
+  .footer__links {
+    margin-bottom: 48px;
+  }
+
+  .nav__logo--img {
+    width: 130px;
+  }
+
+  .nav__links {
+    position: fixed;
+    inset: 0 0 0 10%;
+    background: white;
+    opacity: 0.1;
+  }
+
+  .nav__link--chara, .nav__link {
+    font-size: 36px;
+    color: white;
+    padding: 24px;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__btn--pos {
+    font-size: 22px;
+    margin-top: 24px;
+  }
+
 
 }
