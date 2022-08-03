@@ -16,6 +16,11 @@ body {
   overflow-x: hidden;
 }
 
+.red__color {
+  color: #f73c57;
+  font-size: 24px;
+}
+
 .row {
   width: 100%;
   margin: 0 auto;
@@ -53,6 +58,62 @@ p {
 
 body {
   padding: 2rem;
+}
+
+/* 
+
+CAROUSEL
+
+*/
+
+.carousel {
+  position: relative;
+  display: flex;
+
+
+}
+
+.carousel__nav {
+  width: 100%;
+  vertical-align: middle;
+  width: 2%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: top;
+}
+
+
+.carousel__text {
+  width: 90%;
+}
+
+.carousel__item {
+  height: 300px;
+  padding-left: 24px;
+  padding-top: 24px;
+  display: none;
+}
+
+.carousel__item--selected {
+  display: block;
+}
+
+.carousel__btn {
+  width: 6px;
+  height: 50px;
+  display: inline-block;
+  background: #f73c57;
+  opacity: 0.4;
+  border-radius: 0%;
+  cursor: pointer;
+  margin-top: 30px;
+  
+}
+
+.carousel__btn--selected {
+  background: #f73c57;
+  opacity: 0.7;
+
 }
 
 /* NAV
@@ -115,19 +176,21 @@ body {
 }
 
 .btn {
-  background-color: #f73c57;
+  background-color: #000f22;
+  border-color: #f73c57;
+  border-width: 2px1;
   color: white;
   padding: 12px 40px;
   font-size: 14px;
-  border-radius: 50px;
-  border: none;
-  max-width: 200px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 300ms ease;
+  margin-left: 24px;
 }
 
 .btn:hover {
   opacity: 0.85;
+  background-color: #f73c57;
 }
 
 .nav__link--login {
@@ -191,6 +254,7 @@ header {
   font-size: 24px;
   line-height: 1.5;
   color: white;
+  margin-top: 12px;
 }
 
 .header__img {
@@ -206,7 +270,7 @@ header {
   .header__img--pic {
     width: 55%;
     position: absolute;
-    transform: translate(-30px, -300px);
+    transform: translate(-30px, -250px);
   }
 }
 
@@ -317,6 +381,7 @@ header {
     margin-bottom: 64px;
     text-align: left;
     color: white;
+    min-width: 220px !important;
     
     
 }
@@ -515,6 +580,9 @@ span {
   transform: rotate(90deg);
   z-index: -1000;
 }
+.sub {
+  min-width: 220px;
+}
 
 @media (max-width: 580px) {
   .header__description--title {
@@ -571,8 +639,11 @@ span {
     margin-bottom: 64px;
     text-align: left;
     color: white;
+    max-width: 20px;
+    min-width: 120px !important;
   
   }
+
 
   .titulo__marcas {
     font-size: 48px;
@@ -665,7 +736,7 @@ span {
 
   .header__btn--pos {
     font-size: 22px;
-    margin-top: 24px;
+    margin-top: 58px;
   }
 
 
